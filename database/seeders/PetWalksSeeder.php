@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use DB;
 use App\Models\PetWalks;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,6 +14,12 @@ class PetWalksSeeder extends Seeder
      */
     public function run(): void
     {
-        PetWalks::factory()->times(1)->create();
+        DB::table('pet_walks')->insert(
+            array(
+                'pet_id' => 11,
+                'location' => 'el parque',
+                'walk_date' => '2024-02-14'
+            )
+        );
     }
 }

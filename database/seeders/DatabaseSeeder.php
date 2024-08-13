@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
 
 
         $this->call(PetsSeeder::class);
-        //$this->call(PetWalksSeeder::class);
+        $this->call(PetWalksSeeder::class);
         // User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
